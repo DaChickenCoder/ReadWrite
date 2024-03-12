@@ -1,8 +1,6 @@
 *{
-    background-color: #252525;
-    color: rgb(117, 236, 81);
     text-align: center;
-    font-family: 'Courier new',sans-serif;
+    font-family: 'Open Sans',sans-serif;
 }
 
 #connectionLabel{
@@ -24,15 +22,16 @@
 }
 
 .sectionInput{
+    font-size: 16px;
     height: 40px;
-    border: solid rgb(117, 236, 81) 1.5px;
-    outline: solid rgb(117, 236, 81) 1.5px;
-    color: rgb(236, 236, 236);
+    border: solid rgb(0, 0, 0) 1.5px;
+    outline: solid rgb(0, 0, 0) 1.5px;
 }
 
 #submitButton{
+    font-size: 17.5px;
     width: 250px;
-    height: 25px;
-    border: solid rgb(117, 236, 81) 2px;
+    height: 30px;
+    border: solid rgb(0, 0, 0) 2px;
     border-radius: 10px;
 }

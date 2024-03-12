@@ -1,0 +1,38 @@
+*{
+    background-color: #252525;
+    color: rgb(117, 236, 81);
+    text-align: center;
+    font-family: 'Courier new',sans-serif;
+}
+
+#connectionLabel{
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.sectionText{
+    font-size: 20px;
+    width: 100px;
+    text-align: center;
+}
+
+.sectionInput{
+    height: 40px;
+    border: solid rgb(117, 236, 81) 1.5px;
+    outline: solid rgb(117, 236, 81) 1.5px;
+    color: rgb(236, 236, 236);
+}
+
+#submitButton{
+    width: 250px;
+    height: 25px;
+    border: solid rgb(117, 236, 81) 2px;
+    border-radius: 10px;
+}

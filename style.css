@@ -28,10 +28,14 @@
     outline: solid rgb(0, 0, 0) 1.5px;
 }
 
-#submitButton{
+.dbButton{
     font-size: 17.5px;
-    width: 250px;
+    width: 175px;
     height: 30px;
     border: solid rgb(0, 0, 0) 2px;
     border-radius: 10px;
+}
+
+#setButton{
+    margin-right: 15px;
 }

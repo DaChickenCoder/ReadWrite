@@ -4,18 +4,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReadWrite</title>
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="main.js"></script>
 </head>
 <body>
     <h1>Reading and Writing Data in Firebase</h1>
     <div id="connectionLabel">Database Connection: None</div>
     <div class="section" id="keySection">
         <p class="sectionText">Key: </p>
-        <input class="sectionInput" type="text" placeholder="Enter Key here...">
+        <input class="sectionInput" id="keyInput" type="text" placeholder="Enter Key here...">
     </div>
     <div class="section" id="valueSection">
         <p class="sectionText">Value: </p>
-        <input class="sectionInput" type="text" placeholder="Enter Value here...">
+        <input class="sectionInput" id="valueInput" type="text" placeholder="Enter Value here...">
     </div>
-    <button id="submitButton">Update Database</button>
+    <div class="section">
+        <button class="dbButton" id="setButton">Set Key Value</button>
+        <button class="dbButton" id="getButton">Get Key Value</button> 
+    </div>
 </body>
+<script>
+    
+</script>
 </html>

@@ -19,14 +19,20 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase();
 
 // Elements
+const connectionLabel = document.getElementById("connectionLabel")
 const keyInput = document.getElementById("keyInput")
 const valueInput = document.getElementById("valueInput")
 const setButton = document.getElementById("setButton")
-const getButton = document.getAnimations("getButton")
+const getButton = document.getElementById("getButton")
+if(db){
+    connectionLabel.innerText = "Database Connection: " + firebaseConfig.projectId
+} else {
+    connectionLabel.innerText = " Database Connection: Not Connected"
+}
 
 setButton.addEventListener("click", function(){
   if(keyInput.value != "" && valueInput.value != ""){
-      set(ref(db, keyInput.value), {
+      set(ref(db, "data/" + keyInput.value), {
           value: valueInput.value
       }).then(function(){
           alert("Success!")
@@ -40,8 +46,11 @@ setButton.addEventListener("click", function(){
 
 getButton.addEventListener("click", function(){
     if(keyInput.value != ""){
-        get(ref(db, keyInput.value)).then(function(snapshot){
-          // STOPPED HERE
+        get(ref(db, "data/" + keyInput.value)).then(function(snapshot){
+            const data = snapshot.val()
+            valueInput.value = data.value   
+        }).catch(function(err){
+            valueInput.value = "Invalid Key!"
         })
     } else {
         alert("You must enter a string into the key box.")

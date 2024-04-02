@@ -38,7 +38,7 @@ setButton.addEventListener("click", function(){
       set(ref(db, "data/" + keyInput.value), {
           value: valueInput.value
       }).then(function(){
-          alert("Success!")
+          alert("Successfully set the value of key '" + keyInput.value + "' to '" + valueInput.value + "'")
       }).catch(function(err){
           alert("Failed to update. Error: " + err)
       })
@@ -52,9 +52,10 @@ getButton.addEventListener("click", function(){
     if(keyInput.value != ""){
         get(ref(db, "data/" + keyInput.value)).then(function(snapshot){
             const data = snapshot.val()
-            valueInput.value = data.value   
+            valueInput.value = data.value  
         }).catch(function(err){
-            valueInput.value = "Invalid Key!"
+            valueInput.value = ""
+            alert("Failed to get data. Error: " + err)
         })
     } else {
         alert("You must enter a string into the key box.")

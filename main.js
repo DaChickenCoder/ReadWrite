@@ -24,12 +24,15 @@ const keyInput = document.getElementById("keyInput")
 const valueInput = document.getElementById("valueInput")
 const setButton = document.getElementById("setButton")
 const getButton = document.getElementById("getButton")
+
+// Database Connection
 if(db){
     connectionLabel.innerText = "Database Connection: " + firebaseConfig.projectId
 } else {
     connectionLabel.innerText = " Database Connection: Not Connected"
 }
 
+// Writing Data
 setButton.addEventListener("click", function(){
   if(keyInput.value != "" && valueInput.value != ""){
       set(ref(db, "data/" + keyInput.value), {
@@ -44,6 +47,7 @@ setButton.addEventListener("click", function(){
   }
 })
 
+// Setting Data
 getButton.addEventListener("click", function(){
     if(keyInput.value != ""){
         get(ref(db, "data/" + keyInput.value)).then(function(snapshot){

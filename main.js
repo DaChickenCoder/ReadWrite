@@ -1,7 +1,25 @@
 //------------DATABASE SECTION: Grabs all the functions from the database api that we need and gets the database------------\\
-// Note: DO NOT change any of the code in the database section as doing so will mess up accessing your database
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
-import { get, set, getDatabase, ref} from "https://www.gstatic.com/firebasejs/10.9.0/firebase-database.js";
+/*
+YOU NEED TO PASTE IN YOUR OWN CODE WHICH ALLOWS YOU TO ACCESS YOUR OWN DATABASE. INSTRUCTIONS BELOW:
+
+How to set up a Firebase project: 
+
+1. Go to www.firebase.com
+2. Log in with your PERSONAL email account
+3. Click on “console” then “new project”
+4. Give your project a name &turn off Google Analytics
+5. Once the project is created, go to “project settings” and go to the “general tab”
+6. In the general tab, scroll down to “your apps” and click on the </> icon
+7. Once clicked, make your app nickname the exact same name as your project
+8. In step 2, click on “use a <script> tag”
+9. Copy the code provided but DONT COPY the “<script>” tag portion
+10. Paste the code into your main.js file. Make sure that when referencing the script in 
+    your .html file you use type = “module” or else the database won’t work.
+*/
+
+// -------------------------PASTE CODE BELOW THIS LINE-------------------------
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js"; // X
+import { get, set, getDatabase, ref} from "https://www.gstatic.com/firebasejs/10.9.0/firebase-database.js";// X
 
 const firebaseConfig = {
   apiKey: "AIzaSyCcIOL_iI101QnQkR_fa2OMHXKaxWw-RS0",
@@ -14,6 +32,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getDatabase();
+// -------------------------PASTE CODE ABOVE THIS LINE-------------------------
 
 //------------ELEMENTS SECTION: These are all the html elements on our project that we'll need------------\\
 const connectionLabel = document.getElementById("connectionLabel") // Displays what database we're connected to
